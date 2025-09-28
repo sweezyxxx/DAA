@@ -1,6 +1,7 @@
-DeterministicSelect.class
 Main.class
 MergeSort.class
 Metrics.class
 ClosestPair.class
+DeterministicSelect.class
+ClosestPair$Point.class
 QuickSort.class
