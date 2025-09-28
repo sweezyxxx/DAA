@@ -34,11 +34,11 @@ The goal is to analyze performance using custom metrics (comparisons, swaps, all
 ##  Running the Project
 
 Build & test:
-```bash
 mvn clean test
 <img width="696" height="167" alt="image" src="https://github.com/user-attachments/assets/b5c9d572-60ca-4442-8d72-7a3affe9d121" />
 <img width="645" height="309" alt="image" src="https://github.com/user-attachments/assets/30ba5195-68d2-455d-b4a7-b452e21267fb" />
 <img width="827" height="463" alt="image" src="https://github.com/user-attachments/assets/c80e675b-3d77-427b-a298-9fb9e7148a6e" />
+```bash
 GITLOG:
 PS C:\Users\temir\OneDrive\Desktop\DAA\1\divide-and-conquer> git log --oneline --graph --all
 * 9c54e34 (HEAD -> master) fix: ClosestPair
