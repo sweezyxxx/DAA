@@ -22,6 +22,5 @@ public class MetricsTest {
         m.enterRecursion();
         m.exitRecursion();
         assertEquals(2, m.getMaxDepth());
-        assertEquals(1, m.getMaxDepth()); // проверка, что не падает ниже
     }
 }

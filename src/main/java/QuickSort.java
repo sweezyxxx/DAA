@@ -6,7 +6,7 @@ public class QuickSort {
     private static final int CUTOFF = 16;
 
     public static <T extends Comparable<? super T>> void sort(T[] a, Metrics metrics) {
-        shuffle(a);
+        shuffle(a); // чтобы избежать худшего случая
         sort(a, 0, a.length - 1, metrics);
     }
 
@@ -22,6 +22,7 @@ public class QuickSort {
 
                 int p = partition(a, lo, hi, metrics);
 
+                // рекурсия сначала на меньшей половине
                 if (p - lo < hi - p) {
                     sort(a, lo, p - 1, metrics);
                     lo = p + 1;
@@ -51,4 +52,37 @@ public class QuickSort {
         return i;
     }
 
-    private static <T
+    private static <T> void swap(T[] a, int i, int j, Metrics metrics) {
+        if (i != j) {
+            T tmp = a[i];
+            a[i] = a[j];
+            a[j] = tmp;
+            metrics.incSwaps();
+        }
+    }
+
+    private static <T extends Comparable<? super T>> void insertionSort(T[] a, int lo, int hi, Metrics metrics) {
+        for (int i = lo + 1; i <= hi; i++) {
+            T key = a[i];
+            int j = i - 1;
+            while (j >= lo) {
+                metrics.incComparisons();
+                if (a[j].compareTo(key) <= 0) break;
+                a[j + 1] = a[j];
+                metrics.incSwaps();
+                j--;
+            }
+            a[j + 1] = key;
+            metrics.incSwaps();
+        }
+    }
+
+    private static <T> void shuffle(T[] a) {
+        for (int i = 1; i < a.length; i++) {
+            int j = rnd.nextInt(i + 1);
+            T tmp = a[i];
+            a[i] = a[j];
+            a[j] = tmp;
+        }
+    }
+}
