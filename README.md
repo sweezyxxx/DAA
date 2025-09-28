@@ -5,7 +5,7 @@ The goal is to analyze performance using custom metrics (comparisons, swaps, all
 
 ---
 
-## 📌 Implemented Algorithms
+##  Implemented Algorithms
 
 - **MergeSort**  
   Optimized merge sort with cutoff for small subarrays and buffer reuse.
@@ -21,7 +21,7 @@ The goal is to analyze performance using custom metrics (comparisons, swaps, all
 
 ---
 
-## 📊 Metrics Tracked
+## Metrics Tracked
 
 - `comparisons` – number of key comparisons  
 - `swaps` – number of element moves  
@@ -31,7 +31,7 @@ The goal is to analyze performance using custom metrics (comparisons, swaps, all
 
 ---
 
-## 🚀 Running the Project
+##  Running the Project
 
 Build & test:
 ```bash
